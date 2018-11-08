@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack -d --watch",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "run": "npm run build && node server.js"
   },
   "keywords": [
     "github",
@@ -18,7 +19,8 @@
     "axios": "^0.9.1",
     "corner-notie": "^1.2.0",
     "d3": "^3.5.6",
-    "nvd3": "^1.8.1"
+    "nvd3": "^1.8.1",
+    "express": "^4.13.3"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",

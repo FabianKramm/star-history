@@ -1,0 +1,32 @@
+version: v1alpha1
+cluster:
+  cloudProvider: devspace-cloud
+  cloudProviderDeployTarget: production
+devSpace:
+  deployments:
+  - helm:
+      chartPath: ./chart
+      devOverwrite: ./chart/dev-overwrite.yaml
+    name: devspace-default
+  ports:
+  - portMappings:
+    - localPort: 3000
+      remotePort: 3000
+    service: default
+  services:
+  - labelSelector:
+      devspace: default
+    name: default
+  sync:
+  - containerPath: /app
+    localSubPath: ./
+    service: default
+    uploadExcludePaths:
+    - Dockerfile
+    - .devspace/
+    - chart/
+    - node_modules/
+images:
+  default:
+    createPullSecret: false
+    name: fabian1991/devspace

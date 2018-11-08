@@ -1,0 +1,5 @@
+containers:
+  default:
+    image: "use this for devspace deploy, will be overwritten by devspace up"
+
+pullSecrets: []
