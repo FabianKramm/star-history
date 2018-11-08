@@ -6,6 +6,19 @@
 
 ![](./assets/lodashUnderscore.png)
 
+## Installation
+
+### Docker Installed
+Simply run in your shell:
+```
+docker build -t star-history . && docker run -p 3000:3000 star-history
+```
+
+### No Docker Installed
+You can use devspace an open-source project to deploy the application (Simply download the latest release from [devspace](https://github.com/covexo/devspace/releases) and put it in your path). Simply run in your shell:
+```
+devspace deploy
+```
 
 ## Updates
 
