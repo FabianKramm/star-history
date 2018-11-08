@@ -30,3 +30,6 @@ images:
   default:
     createPullSecret: false
     name: fabian1991/devspace
+    tag: ZjlQAH0
+    build:
+      disabled: true
